@@ -17,7 +17,7 @@ body {
 	justify-content: space-between;
 	width: 100%;
 	height: 100vh;
-	background-color: snow;
+	background-color: #eaeaea;
 }
 
 header {
@@ -33,10 +33,214 @@ img {
 	height: 60px;
 }
 
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 80vh;
+}
+
+#container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 250px;
+	height: 460px;
+	background-color: #fafafa;
+	box-shadow: -7px -7px 60px rgba(255, 255, 255, 0.85),
+		7px 7px 50px rgba(0, 0, 0, 0.15);
+	border-radius: 16px;
+	transform: scale(1.3);
+}
+
+#calc {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-areas:
+		"delete parentheses percentage divide"
+		"seven eight nine multiply"
+		"four five six substract"
+		"one two three add"
+		"double-zero zero dot equal";
+	background-color: transparent;
+	border-radius: 16px;
+	width: 230px;
+	height: 300px;
+}
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	background-color: #fafafa;
+	box-shadow: -4px -4px 6px rgba(255, 255, 255, 0.95),
+		2px 2px 2px rgba(0, 0, 0, 0.15);
+	border-radius: 8px;
+}
+
+#screen {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 15px 20px;
+	grid-area: screen;
+	background-color: #fafafa;
+	width: 230px;
+	height: 130px;
+	margin-bottom: 10px;
+	border-radius: 16px;
+	box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+#equation {
+	height: 100%;
+	font-size: 14px;
+}
+
+#result {
+	height: 100%;
+	margin-top: 10px;
+	font-size: 36px;
+	margin: 0;
+}
+
+#erase {
+	height: 30px;
+	width: 30px;
+	font-size: 7px;
+}
+
+.delete {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-area: delete;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	background-color: #ff4545;
+	box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.parentheses {
+	grid-area: parentheses;
+	text-align: center;
+	font-size: 14px;
+}
+
+.percentage {
+	grid-area: percentage;
+	text-align: center;
+	font-size: 14px;
+}
+
+.divide {
+	grid-area: divide;
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+	background-color: #ffb545;
+	box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.multiply {
+	grid-area: multiply;
+	text-align: center;
+	font-size: 18px;
+}
+
+.substract {
+	grid-area: substract;
+	text-align: center;
+}
+
+.add {
+	grid-area: add;
+	text-align: center;
+}
+
+.one {
+	grid-area: one;
+	text-align: center;
+}
+
+.two {
+	grid-area: two;
+	text-align: center;
+}
+
+.three {
+	grid-area: three;
+	text-align: center;
+}
+
+.four {
+	grid-area: four;
+	text-align: center;
+}
+
+.five {
+	grid-area: five;
+	text-align: center;
+}
+
+.six {
+	grid-area: six;
+	text-align: center;
+}
+
+.seven {
+	grid-area: seven;
+	text-align: center;
+}
+
+.eight {
+	grid-area: eight;
+	text-align: center;
+}
+
+.nine {
+	grid-area: nine;
+	text-align: center;
+}
+
+.negative {
+	grid-area: double-zero;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	background-color: #038ec9;
+	box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.zero {
+	grid-area: zero;
+	text-align: center;
+}
+
+.dot {
+	grid-area: dot;
+	text-align: center;
+}
+
+.equal {
+	grid-area: equal;
+	text-align: center;
+	color: #fff;
+	background-color: #00b533;
+	box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.15);
+	border-bottom-right-radius: 24px;
+}
+
 footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	height: 10vh;
 }
 
 footer p {

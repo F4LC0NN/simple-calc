@@ -96,6 +96,110 @@ function runCalculator() {
           array = [];
         });
       break;
+      case buttonsList[1]: // POWER
+      item.addEventListener('click', () => {
+        // Prevent the array to store more than two elements
+        if (array.length > 1) {
+          return;
+        }
+        // Do not trigger the button when the result screen is empty
+        if (result.textContent.charAt(0) === '') {
+          return;
+        }
+        // Push the result's content in the array as the first element
+        array.push(result.textContent);
+        // Push the operator as the second element
+        result.textContent += '^';
+        array.push('**');
+        screenInput.value += result.textContent;
+        result.textContent = '';
+      });
+      break;
+      case buttonsList[2]: // PERCENT
+      item.addEventListener('click', () => {
+        // Prevent the array to store more than two elements
+        if (array.length > 1) {
+          return;
+        }
+        // Do not trigger the button when the result screen is empty
+        if (result.textContent.charAt(0) === '') {
+          return;
+        }
+        array.push(result.textContent);
+          result.textContent += '%';
+          array.push('%');
+          screenInput.value += result.textContent;
+          result.textContent = '';
+      });
+      break;
+      case buttonsList[3]: // DIVIDE
+      item.addEventListener('click', () => {
+        // Prevent the array to store more than two elements
+        if (array.length > 1) {
+          return;
+        }
+        // Do not trigger the button when the result screen is empty
+        if (result.textContent.charAt(0) === '') {
+          return;
+        }
+        array.push(result.textContent);
+          result.textContent += '/';
+          array.push('/');
+          screenInput.value += result.textContent;
+          result.textContent = '';
+      });
+      break;
+      case buttonsList[4]: // MULTIPLY
+      item.addEventListener('click', () => {
+        // Prevent the array to store more than two elements
+        if (array.length > 1) {
+          return;
+        }
+        // Do not trigger the button when the result screen is empty
+        if (result.textContent.charAt(0) === '') {
+          return;
+        }
+        array.push(result.textContent);
+          result.textContent += '✕';
+          array.push('*');
+          screenInput.value += result.textContent;
+          result.textContent = '';
+      });
+      break;
+      case buttonsList[5]: // SUBSTRACT
+        item.addEventListener('click', () => {
+          // Prevent the array to store more than two elements
+          if (array.length > 1) {
+            return;
+          }
+          // Do not trigger the button when the result screen is empty
+          if (result.textContent.charAt(0) === '') {
+            return;
+          }
+          array.push(result.textContent);
+          result.textContent += '—';
+          array.push('-');
+          screenInput.value += result.textContent;
+          result.textContent = '';
+        });
+      break;
+      case buttonsList[6]: // ADD
+      item.addEventListener('click', () => {
+        // Prevent the array to store more than two elements
+        if (array.length > 1) {
+          return;
+        }
+        // Do not trigger the button when the result screen is empty
+        if (result.textContent.charAt(0) === '') {
+          return;
+        }
+        array.push(result.textContent);
+        result.textContent += '+';
+        array.push('+');
+        screenInput.value += result.textContent;
+        result.textContent = '';
+      });
+      break;
     }
   });
 }

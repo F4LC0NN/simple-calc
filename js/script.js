@@ -85,4 +85,17 @@ EVENTS
 // Create a function to show the buttons's input on the screen
 function runCalculator() {
   let array = [];
+
+  // Create a button's event to input their value in the screen
+  buttonsList.forEach((item) => {
+    switch (item) {
+      case buttonsList[0]: // CLEAR
+        item.addEventListener('click', () => {
+          screenInput.value = null;
+          result.textContent = null;
+          array = [];
+        });
+      break;
+    }
+  });
 }

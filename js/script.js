@@ -308,3 +308,124 @@ function runCalculator() {
 }
 
 runCalculator();
+
+function getAddition(array)  {
+  // Do not trigger when the input screen is empty
+  if (screenInput.value === '') {
+    return;
+  }
+  // Push the content of result in the array to start the operation process
+  screenInput.value += result.textContent;
+  array.push(result.textContent);
+  // Target the position of the operator in the array
+  let index = array.indexOf('+');
+  // Cut the array into two parts:
+  // The first part to the left side of the operator
+  firstArg = parseFloat(array.slice(0, index).join(''));
+  // The second part to the right side of the operator
+  secondArg = parseFloat(array.slice(index + 1, array.length).join(''));
+  // Instantiate a new calculator object to initialize the operation process
+  let calc = new Calculator(firstArg, secondArg);
+  // Prevent any operation process if either arguments return NaN
+  if (isNaN(firstArg) || isNaN(secondArg)) {
+    return;
+  }
+  // Clear the input screen
+  screenInput.value = '';
+  // Trigger the operation
+  result.textContent = calc.addition;
+}
+
+function getsubstraction(array)  {
+  // SEE GETADDITION()
+  if (screenInput.value === '') {
+    return;
+  }
+  screenInput.value += result.textContent;
+  array.push(result.textContent);
+  let index = array.indexOf('-');
+  firstArg = parseFloat(array.slice(0, index).join(''));
+  secondArg = parseFloat(array.slice(index + 1, array.length).join(''));
+  let calc = new Calculator(firstArg, secondArg);
+  if (isNaN(firstArg) || isNaN(secondArg)) {
+    return;
+  } 
+  screenInput.value = '';
+  result.textContent = calc.substraction;
+}
+
+function getMultiplication(array) {
+  // SEE GETADDITION()
+  if (screenInput.value === '') {
+    return;
+  }
+  screenInput.value += result.textContent;
+  array.push(result.textContent);
+  let index = array.indexOf('*');
+  firstArg = parseFloat(array.slice(0, index).join(''));
+  secondArg = parseFloat(array.slice(index + 1, array.length).join(''));
+  let calc = new Calculator(firstArg, secondArg);
+  if (isNaN(firstArg) || isNaN(secondArg)) {
+    return;
+  } 
+  screenInput.value = '';
+  result.textContent = calc.multiplication;
+}
+
+function getDivision(array) {
+  // SEE GETADDITION()
+  if (screenInput.value === '') {
+    return;
+  }
+  screenInput.value += result.textContent;
+  array.push(result.textContent);
+  let index = array.indexOf('/');
+  firstArg = parseFloat(array.slice(0, index).join(''));
+  secondArg = parseFloat(array.slice(index + 1, array.length).join(''));
+  let calc = new Calculator(firstArg, secondArg);
+  if (isNaN(firstArg) || isNaN(secondArg)) {
+    return;
+  } 
+  screenInput.value = '';
+  result.textContent = calc.division;
+}
+
+function getPercentage(array) {
+  // SEE GETADDITION()
+  if (screenInput.value === '') {
+    return;
+  }
+  screenInput.value += result.textContent;
+  array.push(result.textContent);
+  let index = array.indexOf('%');
+  let firstArg = parseFloat(array.slice(0, index).join(''));
+  let secondArg = 100;
+  let calc = new Calculator(firstArg, secondArg);
+  if (isNaN(firstArg) || isNaN(secondArg)) {
+    return;
+  } 
+  screenInput.value = '';
+  result.textContent = calc.percent();
+}
+
+function getExponentiation(array) {
+  // SEE GETADDITION()
+  if (screenInput.value === '') {
+    return;
+  }
+  if (result.length > 5) {
+    Number(result.textContent).toExponential();
+    result.style.fontSize = '9px';
+  }
+  screenInput.value += result.textContent;
+  array.push(result.textContent);
+  let index = array.indexOf('**');
+  firstArg = parseFloat(array.slice(0, index).join(''));
+  secondArg = parseFloat(array.slice(index + 1, array.length).join(''));
+  let calc = new Calculator(firstArg, secondArg);
+  if (isNaN(firstArg) || isNaN(secondArg)) {
+    return;
+  } 
+  screenInput.value = '';
+  result.textContent = calc.exponentiation;
+}

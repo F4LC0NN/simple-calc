@@ -75,3 +75,14 @@ const result = document.querySelector('#result');
 const screenInput = document.querySelector('#input');
 // Select the erase button to delete the input values one after the other
 const eraseButton = document.querySelector('#erase');
+
+/*
+---------------------------------------------------------------------
+EVENTS
+---------------------------------------------------------------------
+*/
+
+// Create a function to show the buttons's input on the screen
+function runCalculator() {
+  let array = [];
+}

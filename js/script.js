@@ -306,3 +306,5 @@ function runCalculator() {
     screenInput.value = screenInput.value.substring(0, screenInput.value.length - 1);
   });
 }
+
+runCalculator();

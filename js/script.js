@@ -266,6 +266,37 @@ function runCalculator() {
         result.textContent += '.';
       });
       break;
+      case buttonsList[19]: // EQUAL
+        item.addEventListener('click', () => {
+          // Trigger the operation based on the current operator in the array
+          switch (true) {
+            case (array.includes('+')):
+              getAddition(array);
+              array = []; // Empty the array everytime the operation has finished
+            break;
+            case (array.includes('-')):
+              getsubstraction(array);
+              array = [];
+            break;
+            case (array.includes('*')):
+              getMultiplication(array);
+              array = [];
+            break;
+            case (array.includes('/')):
+              getDivision(array);
+              array = [];
+            break;
+            case (array.includes('%')):
+              getPercentage(array);
+              array = [];
+            break;
+            case (array.includes('**')):
+              getExponentiation(array);
+              array = [];
+            break;
+          }
+        });
+      break;
     }
   });
 }

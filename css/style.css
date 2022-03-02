@@ -82,6 +82,10 @@ section {
 	border-radius: 8px;
 }
 
+.button-active {
+	transform: scale(0.95);
+}
+
 #screen {
 	display: flex;
 	flex-direction: column;
@@ -101,10 +105,23 @@ section {
 	font-size: 14px;
 }
 
+#input {
+	font-family: "Poppins";
+	height: 30px;
+	width: 100%;
+	text-align: end;
+	border: none;
+	background-color: transparent;
+}
+
+#input:focus {
+	outline: none;
+}
+
 #result {
 	height: 100%;
 	margin-top: 10px;
-	font-size: 36px;
+	font-size: 18px;
 	margin: 0;
 }
 
@@ -120,7 +137,6 @@ section {
 	align-items: center;
 	grid-area: delete;
 	text-align: center;
-	font-size: 18px;
 	color: #fff;
 	background-color: #ff4545;
 	box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.25);
@@ -141,7 +157,7 @@ section {
 .divide {
 	grid-area: divide;
 	text-align: center;
-	font-size: 24px;
+	font-size: 18px;
 	color: #fff;
 	background-color: #ffb545;
 	box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.15);
@@ -211,7 +227,6 @@ section {
 .negative {
 	grid-area: double-zero;
 	text-align: center;
-	font-size: 18px;
 	color: #fff;
 	background-color: #038ec9;
 	box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.15);
@@ -235,7 +250,6 @@ section {
 	box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.15);
 	border-bottom-right-radius: 24px;
 }
-
 footer {
 	display: flex;
 	justify-content: center;

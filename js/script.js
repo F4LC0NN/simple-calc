@@ -60,3 +60,18 @@ class Calculator {
     return Math.round((this.firstOperand ** this.secondOperand).toExponential(2));
   }
 }
+
+/*
+---------------------------------------------------------------------
+SELECTORS
+---------------------------------------------------------------------
+*/
+
+// Select the buttons to return their values in the screen
+const buttonsList = Array.from(document.querySelectorAll('.button'));
+// Select the screen result display
+const result = document.querySelector('#result');
+// Select the screen to show the input
+const screenInput = document.querySelector('#input');
+// Select the erase button to delete the input values one after the other
+const eraseButton = document.querySelector('#erase');

@@ -299,4 +299,10 @@ function runCalculator() {
       break;
     }
   });
+
+  // Create an event to erase the input one character at a time
+  eraseButton.addEventListener('click', () => {
+    array.pop()
+    screenInput.value = screenInput.value.substring(0, screenInput.value.length - 1);
+  });
 }
